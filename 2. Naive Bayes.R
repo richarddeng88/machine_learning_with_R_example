@@ -13,8 +13,8 @@ library(doMC)
 
 
 if (!file.exists("data/machine_learning_w_r/smsspamcollection.zip")) {
-  download.file(url="http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/smsspamcollection.zip",
-                destfile="data/machine_learning_w_r/smsspamcollection.zip")
+    download.file(url="http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/smsspamcollection.zip",
+                  destfile="data/machine_learning_w_r/smsspamcollection.zip")
 }
 
 sms_raw <- read.table(unzip("data/machine_learning_w_r/smsspamcollection.zip","SMSSpamCollection.txt"),
@@ -25,27 +25,6 @@ sms_raw$type <- factor(sms_raw$type)
 set.seed(12358)
 sms_raw <- sms_raw[sample(nrow(sms_raw)),]
 str(sms_raw)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
