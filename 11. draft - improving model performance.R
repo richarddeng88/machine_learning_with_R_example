@@ -83,6 +83,7 @@ rf <- randomForest(default ~ ., data = credit)
 rf
 
 
+# comparing RF and TREE models, to see which one is better? 
 library(caret)
 ctrl <- trainControl(method = "repeatedcv", number = 10, repeats = 10)
 grid_rf <- expand.grid(.mtry = c(2, 4, 8, 16))
